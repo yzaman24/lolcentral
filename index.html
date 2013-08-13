@@ -1,165 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+<title>Test</title>
+
 <style type="text/css">
-#content-wrapper {
-	width: 400px;
-	height: 700px;
-	margin:auto;
-	background-color:#CCC;
-	border: 2px solid black;
+html {height:100%;}
+.b1 {background:url(pattern_008.gif);}
+.b2 {background:url(bg.png);}
+body {
+	height:100%;
+	background-attachment: fixed;
+	margin: 0;
 }
-
-#map-wrapper
-{
-	width: 400px;
-	height: 400px;
-	background-image:url(file:///C|/Users/Yousaf%20Zaman/Desktop/SummonersRift.png);
-	background-repeat:no-repeat;
-	border-bottom: 1px solid black;
-}
-
-.counter
-{
-	width:40px;
-	height:40px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	border: 1px solid black;
-	color:#fff;
-	font-size:18px;
-	font-weight:bold;
-	text-align:center;
-	line-height:40px;;
-	font-family:Tahoma, Geneva, sans-serif;
-}
-
-.blue {
-	background-color: #06F;	
-}
-
-.purple {
-	background-color: #96F;	
-}
-
-.timer-up
-{
-	text-align:center;
-	animation-duration: 0.5s;
- 	animation-name: timerUpAlert;
- 	animation-iteration-count: infinite;
- 	animation-direction: alternate;
-}
-
-.last-minute {
-    -webkit-animation-name:             rotate; 
-    -webkit-animation-duration:         0.5s; 
-    -webkit-animation-iteration-count:  infinite;
-    -webkit-animation-timing-function: linear;
-}
-
-@keyframes timerUpAlert {
-  from {
-    background-color: #000;
-  }
-
-  to {
-    background-color: #F00;
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg;
-  }
-}
-
 </style>
 
 <script>
-var counts = {wraith: 10, baron: 10};
+function onloadfunction() {
+var date = new Date();
+var seconds = date.getSeconds();
 
-var startCounts = {wraith: 10, baron: 10};
-
-var timerStarted = {wraith: false, baron: false};
-
-var intervals = {wraith: 'i0', baron: 'i1'};
-
-window.onload = function() {
-	    var counterDivs = document.getElementsByClassName('counter');
-		for (var i = 0; i < counterDivs.length; i++)
-		{
-			var item = counterDivs[i];
-			item.innerHTML = startCounts[item.id];
-		}
-      //  document.getElementById("wraith-counter").innerHTML = count;
-}
-	
-function startCounter(idname, color)
+if (seconds > 30)
 {
-	var container = document.getElementById(idname);
-	var classList = container.className.split(/\s+/);
-	var sc = startCounts[idname];
-    timerStarted[idname] = !timerStarted[idname];
-	
-//	if (ts != true)
-//	{
-		if (classList.length > 2)
-		{	
-			container.innerHTML = sc;
-			counts[idname] = sc;
-			container.className = 'counter';
-			container.className += ' ' + classList[1];	
-		} else {
-	       beginInterval(idname, intervals[idname], classList[1]);
-		}
-	//} 
+	var body=document.getElementsByTagName('body')[0];
+	body.style.backgroundImage='url(bg.png)';
 }
 
-function beginInterval(idname, interval, color)
-{
-	var container = document.getElementById(idname);
-      
-			interval = setInterval(function() {
-			if (timerStarted[idname] == true) {	
-				if(counts[idname] == 0) {
-					clearInterval(interval);
-					container.className += ' timer-up';
-					timerStarted[idname] = false;
-				} else {
-					counts[idname]--;
-					container.innerHTML = counts[idname];
-					if (counts[idname] < 6)
-					{
-						container.className += ' last-minute';	
-					}
-				}
-			} else {
-				clearInterval(interval);
-				counts[idname] = startCounts[idname];
-				container.class = 'counter ' + color;
-				container.innerHTML = counts[idname];
-			}
-			}, 1000);
 }
-
 </script>
+</head>
 
-<body>
-<div id="content-wrapper">
-<div id="map-wrapper">
-<!-- make sure you put classes as 'counter color'. Order specific -->
-<div id="wraith" class="counter blue" onclick="startCounter('wraith', 'blue');" style="position:relative; left:50px; top: 50px;"></div>
-<div id="baron" class="counter purple" onclick="startCounter('baron', 'purple');" style="position:relative; left:200px; top: 200px;"></div>
-</div>
-</div>
+<body onLoad="onloadfunction();" class="b1">
+<table width="50%" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color:#fff; margin-top:40px;">
+  <tr>
+    <td colspan="2" align="center">
+    <div id="test"><h1>Title</h1></div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
 
 </body>
 </html>
