@@ -2,43 +2,38 @@
 <head>
 <title>Test</title>
 
+<link href="js-image-slider.css" rel="stylesheet" type="text/css" /> 
+
 <style type="text/css">
 html {height:100%;}
-.b1 {background:url(pattern_008.gif);}
-.b2 {background:url(bg.png);}
+.b1 {background:url(file:///C|/Users/Yousaf%20Zaman/Desktop/pattern_008.gif);}
+.b2 {background:url(file:///C|/Users/Yousaf%20Zaman/Desktop/bg.png);}
 body {
 	height:100%;
 	background-attachment: fixed;
 	margin: 0;
 }
 </style>
-
+<script src="js-image-slider.js" type="text/javascript"></script>
 <script>
 function onloadfunction() {
 var date = new Date();
-var seconds = date.getSeconds();
-
-if (seconds > 30)
-{
-	var body=document.getElementsByTagName('body')[0];
-	body.style.backgroundImage='url(bg.png)';
-}
-
+var day = date.getDay();
+var month = date.getMonth();
+var body=document.getElementsByTagName('body')[0];
 }
 </script>
+
 </head>
 
-<body onLoad="onloadfunction();" class="b1">
-<table width="50%" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color:#fff; margin-top:40px;">
-  <tr>
-    <td colspan="2" align="center">
-    <div id="test"><h1>Title</h1></div></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
+<body onLoad="onloadfunction();">
+ <div id="slider"> 
+ 	<img src="slider-1.jpg" alt="Caption for slide 1" />
+  	<img src="slider-2.jpg" />
+   <a href="http://www.menucool.com">
+   <img src="slider-3.jpg" /></a> 
+   <img src="slider-4.jpg" /> 
+   <img src="slider-5.jpg" alt="Caption for slide 5" />
 
 </body>
 </html>
