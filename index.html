@@ -39,7 +39,7 @@ a {text-decoration:none; color:#FF6666;}
 </style>
 <script>
 var counter1 = 0;
-var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat1e.png", "cat1f.png");
+var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat1e.png", "cat1f.png", "cat1g.png", "cat1h.png");
 </script>
 </head>
 
@@ -56,7 +56,7 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
     <td align="center"></td>
   </tr>
      <tr>
-    <td align="center" style="padding:0 0 20px 0;">Title</td>
+    <td align="center" style="padding-top:25px;"><img src="title.png"></td>
   </tr>
   <tr>
     <td align="center"><div class="menu"><p><a href="#"><img src="pill.png" hspace="15" border="0">Daily Medicine</a><a href="#"><img src="pill.png" hspace="15" border="0"></a></p>
@@ -67,7 +67,7 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
     </div></td>
   </tr>
   <tr>
-    <td align="center"><div class="menu"><div id="c1" style="float:left"></div><p><a href="#">50 Shades of Cheetos</a></p></div></td>
+    <td align="center"><div class="menu"><div id="c1" style="position:absolute; margin-left:20px; margin-top:5px;"></div><p><a href="#">50 Shades of Cheetos</a></p></div></td>
   </tr>
 </table>
 
@@ -78,7 +78,7 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
 </table>
 <script>
 function loadsprites(){
-setInterval(function() {animate('c1', sprite1, counter1, 6)},150);
+setInterval(function() {animate('c1', sprite1, counter1, 8)},150);
 }
 function animate(spriteid, array, counter, numpics) {
 	var spritediv = document.getElementById(spriteid);
