@@ -2,14 +2,21 @@
 <head>
 <title>Test</title>
 <style type="text/css">
-html {height:100%;}
-body {height:100%; margin:0; padding:0;}
+html {height:100%; position:relative; min-height:100%; overflow:hidden;}
+body {height:100%; margin:0 0 400px; padding:0;}
 .bg {
 	position:fixed;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
+}
+footer {
+	position:absolute;
+	left:0;
+	bottom:0;
+	height:400px;
+	width: 100%;
 }
 .content {
 		position:relative;
@@ -18,43 +25,49 @@ body {height:100%; margin:0; padding:0;}
 .menu {
 	background-image:url(box2.png);
 	background-repeat:no-repeat;
-	height:97px;
+	height:47px;
 	margin-bottom:20px;
+	font-size:30px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	
 }
 
-a {text-decoration:none; color:#000;}
-</style>
+.menu p{padding-top:5px;}
 
+a {text-decoration:none; color:#FF6666;}
+</style>
 <script>
 var counter1 = 0;
-var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat1e.png", "cat1f.png", "cat1g.png");
-
-
+var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat1e.png", "cat1f.png");
 </script>
-
 </head>
 
 <body onLoad="loadsprites();">
 <div class="bg"><img src="drive_in.png" width="100%" height="100%"></div>
-<div class="content">
-<table align="center" width="800" height="1200" border="0" cellspacing="0" cellpadding="0">
-  <tr height="50%">
-    <td height="578">&nbsp;</td>
-  </tr>
+<footer>
+<div class="content" style="width:100%;">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+
   <tr>
     <td>
-    <table align="center" width="700" border="0" cellspacing="0" cellpadding="0">
+    <table align="center" border="0" cellspacing="0" cellpadding="0" style="width:450px;">
+    <tr>
+    <td align="center"></td>
+  </tr>
      <tr>
-    <td align="center" style="padding:25px;">Title</td>
+    <td align="center" style="padding:0 0 20px 0;">Title</td>
   </tr>
   <tr>
-    <td align="center"><div class="menu" style="font-size:38px; font-weight:bold;"><p style="padding-top:15px;"><a href="#">Daily Medicine</a></p></div></td>
+    <td align="center"><div class="menu"><p><a href="#"><img src="pill.png" hspace="15" border="0">Daily Medicine</a><a href="#"><img src="pill.png" hspace="15" border="0"></a></p>
+    </div></td>
   </tr>
   <tr>
-    <td align="center"><div class="menu" style="font-size:38px; font-weight:bold;"><p style="padding-top:15px;">Daily Medicine</p></div></td>
+    <td align="center"><div class="menu"><p><a href="#"><img src="pixel_heart.png" width="40" height="26" hspace="15" border="0">Trip to Memory Lane</a><a href="#"><img src="pixel_heart.png" width="40" height="26" hspace="15" border="0"></a></p>
+    </div></td>
   </tr>
   <tr>
-    <td align="center"><div class="menu" style="font-size:38px; font-weight:bold;"><p style="padding-top:15px;">Daily Medicine</p></div></td>
+    <td align="center"><div class="menu"><div id="c1" style="float:left"></div><p><a href="#">50 Shades of Cheetos</a></p></div></td>
   </tr>
 </table>
 
@@ -63,15 +76,14 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
   </tr>
   
 </table>
-
 <script>
 function loadsprites(){
-setInterval(function() {animate('c1', sprite1, counter1, 7)},150);
+setInterval(function() {animate('c1', sprite1, counter1, 6)},150);
 }
 function animate(spriteid, array, counter, numpics) {
 	var spritediv = document.getElementById(spriteid);
 	
-	spritediv.innerHTML ="<img src='" + array[counter1] + "' />";
+	spritediv.innerHTML ="<img src='" + array[counter1] + "' width='31' height='33' />";
 	counter1++;
 	
 	if (counter1 > numpics - 1)
@@ -81,5 +93,6 @@ function animate(spriteid, array, counter, numpics) {
 }
 </script>
 </div>
+</footer>
 </body>
 </html>
