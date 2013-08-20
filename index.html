@@ -37,18 +37,9 @@ footer {
 
 a {text-decoration:none; color:#FF6666;}
 </style>
-<script type="text/javascript" src="cordova.js"></script>
 <script>
 var counter1 = 0;
 var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat1e.png", "cat1f.png", "cat1g.png", "cat1h.png");
-
- document.addEventListener("deviceready", onDeviceReady, false);
-
-    // PhoneGap is ready
-    //
-    function onDeviceReady() {
-        playAudio("/android_asset/www/flyme.mp3");
-    }
 </script>
 </head>
 
@@ -57,7 +48,14 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
 <footer>
 <div class="content" style="width:100%;">
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="width:100%;">
-
+  <tr>
+  <td>
+  <audio controls>
+  <source src="flyme.mp3" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
   <tr>
     <td>
     <table align="center" border="0" cellspacing="0" cellpadding="0" style="width:450px;">
@@ -78,6 +76,7 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
   <tr>
     <td align="center"><div class="menu"><div id="c1" style="position:absolute; margin-left:20px; margin-top:5px;"></div><p><a href="#">50 Shades of Cheetos</a></p></div></td>
   </tr>
+
 </table>
 
     
