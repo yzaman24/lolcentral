@@ -2,11 +2,18 @@
 <head>
 <title>Test</title>
 <style type="text/css">
+html {height:100%;}
+body {height:100%; margin:0; padding:0;}
 .bg {
-	background-image:url(drive_in.png);
-	background-repeat:no-repeat;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
-.contentwrapper {
+.content {
+		position:relative;
+		z-index:1;
 }
 .menu {
 	background-image:url(box2.png);
@@ -28,7 +35,9 @@ var sprite1 = new Array("cat1a.png", "cat1b.png", "cat1c.png", "cat1d.png", "cat
 </head>
 
 <body onLoad="loadsprites();">
-<table align="center" width="800" height="1200" border="0" cellspacing="0" cellpadding="0" class="bg">
+<div class="bg"><img src="drive_in.png" width="100%" height="100%"></div>
+<div class="content">
+<table align="center" width="800" height="1200" border="0" cellspacing="0" cellpadding="0">
   <tr height="50%">
     <td height="578">&nbsp;</td>
   </tr>
@@ -71,5 +80,6 @@ function animate(spriteid, array, counter, numpics) {
 	}
 }
 </script>
+</div>
 </body>
 </html>
