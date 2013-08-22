@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Daily Medicine</title>
+
+<style type="text/css">
+html {height:100%; position:relative; min-height:100%; overflow:hidden;}
+body {height:100%; margin:0 0 400px; padding:0;}
+.bg {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+</style>
+<script>
+var date = new Date();
+var day = date.getDay();
+var hour = date.getHours();
+var minute = date.getMinutes();
+var qte;
+var msg;
+
+function onload() {
+	if (minute == 1){
+		qte = "It is better to be hated for what you are than to be loved for what you are not" ;
+		msg = "test";
+	} else if (minute == 2)
+	{
+		qte = "This is a good sign, having a broken heart. It means we have tried for something.";
+		msg = "test";
+	} else if (minute == 3)
+	{
+		
+	}
+	 else if (minute == 4)
+	{
+		
+	}
+	 else if (minute == 5)
+	{
+		
+	}
+	 else if (minute == 6)
+	{
+		
+	}
+	 else if (minute == 7)
+	{
+		
+	}
+	 else if (minute == 8)
+	{
+		
+	}
+	 else if (minute == 9)
+	{
+		
+	}
+	 else if (minute == 10)
+	{
+		
+	}
+	 else if (minute == 11)
+	{
+		
+	}
+	 else if (minute == 12)
+	{
+		
+	} else if (minute == 13)
+	{
+		
+	}
+	 else if (minute == 14)
+	{
+		
+	}
+	 else if (minute == 15)
+	{
+		
+	}
+	 else if (minute == 16)
+	{
+		
+	}
+	 else if (minute == 17)
+	{
+		
+	}
+	 else if (minute == 18)
+	{
+		
+	}
+	 else if (minute == 19)
+	{
+		
+	} else if (minute == 20)
+	{
+		
+	}
+	 else if (minute == 21)
+	{
+		
+	}
+	 else if (minute == 22)
+	{
+		
+	}
+	 else if (minute == 23)
+	{
+		
+	}
+	 else if (minute == 24)
+	{
+		
+	}
+	 else if (minute == 25)
+	{
+		
+	}
+	 else if (minute == 26)
+	{
+		
+	}
+	 else if (minute == 27)
+	{
+		
+	}
+	 else if (minute == 28)
+	{
+		
+	}
+	 else if (minute == 29)
+	{
+		
+	}
+	 else 
+	{
+		qte = "Love lasteth as long as the money endureth";
+		msg = "test";
+
+	}
+	
+	document.getElementById("txt").innerHTML = "<p>" + qte + "</p><p>" + msg + "</p>";
+}
+</script>
+</head>
+
+<body onLoad="onload();">
+<div class="bg"><img src="collage.png" width="100%" height="100%"></div>
+<div id="txt"></div>
+</body>
+</html>
