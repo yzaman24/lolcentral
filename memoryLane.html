@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Memory Lane</title>
+
+<style type="text/css">
+html {height:100%; position:relative; min-height:100%; overflow:hidden;}
+body {height:100%; margin:0 0 400px; padding:0;}
+.bg {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.rounded{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	margin:auto;
+ 	width:60%;
+	height:200px;
+	background-color:#fff;
+	z-index:1;
+	position:relative;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22px;
+	padding:20px;
+	margin-top:200px;
+	opacity:0.85;
+}
+</style>
+<script>
+var date = new Date();
+var day = date.getDay();
+var hour = date.getHours();
+var msg;
+
+function onload() {
+	if (day == 1){
+		msg = "I'd sing a really good song, but made it super annoying since I sang it too much. Yesterday.. Regrets.. nah NAH nah NAAAAH nuh nuh. Guess what the last one was.";
+	} else if (day == 2)
+	{
+		msg = "We went to Orangeville to get Cheetos and he threw up on your lap.";
+	} else if (day == 3)
+	{
+		msg = "You kept saying PICTURE at CNE even though it didn't register to you that my phone died.";
+	}
+	 else if (day == 4)
+	{
+		msg = "We went to Montana's to try a different place and bar. Montanas is on the other side of the street from Scruffy's.";
+	}
+	 else if (day == 5)
+	{
+		msg = "You brought me lunch to work and all my co-workers were all jealous.";
+	}
+	 else if (day == 6)
+	{
+		msg = "We took professional photos but really, they weren't professional at all. We were just taking silly photos with nice clothes.";
+	}
+	 else if (day == 7)
+	{
+		msg = "When you woke up to Pringles butt in your face, and you didn't care";
+	}
+	 else if (day == 8)
+	{
+		msg = "You randomly say Keeeeeeesssss. I'm sure you are imaging the voice I do of you.";
+	}
+	 else if (day == 9)
+	{
+		msg = "We went to camping just to eat and literall do nothing. Was a good time.";
+	}
+	 else if (day == 10)
+	{
+		msg = "We were driving to New York, and I say its a great feeling having the window down, nice music, nice meal. And you say 'and..........'";
+	}
+	 else if (day == 11)
+	{
+		msg = "That mad awkward moment when 3 guys went to go see you at your work place. Haha. Wasn't funny at the time but now it is.";
+	}
+	 else if (day == 12)
+	{
+		msg = "When I stole the blanket from you while we were sleeping and you looked like the poorest creature I've ever seen.";
+	} else if (day == 13)
+	{
+		msg = "When I could smoke my e-cig and there was NOTHING YOU COULD DO ABOUT IT. That was so funny because I know you wanted to say something.";
+	}
+	 else if (day == 14)
+	{
+		msg = "Our first shawarma date. I noticed for the first time you ate slow.";
+	}
+	 else if (day == 15)
+	{
+		msg = "I took you for a drive many years ago and I remember you were explaining to your parents that im just a friend.";
+	}
+	 else if (day == 16)
+	{
+		msg = "When you don't like it when I call myself mysterious. It just makes you cringe and you have to say something about it.";
+	}
+	 else if (day == 17)
+	{
+		msg = "I tried to make you muffins when we weren't together. Those tasted like crap, but they were made with love.";
+	}
+	 else if (day == 18)
+	{
+		msg = "We sat in the park drinking, and you kept apologizing since you said things you had bottled up inside. It was cute.";
+	}
+	 else if (day == 19)
+	{
+		msg = "You end up waiting for me and we begin our date not on a good start. I'll always know how to cheer you up. Don't worry I'll work on that.";
+	} else if (day == 20)
+	{
+		msg = "We went to an event on celebration square and it turned out to be Jamaican. We left very very soon.";
+	}
+	 else if (day == 21)
+	{
+		msg = "I fell in love with you";
+	}
+	 else if (day == 22)
+	{
+		msg = "I fell asleep and you took pictures of me. You thought it was the only time I was innocent.";
+	}
+	 else if (day == 23)
+	{
+		msg = "You were drenched in the rain and you used held a bag over my head to make sure my hair wouldn't get wet.";
+	}
+	 else if (day == 24)
+	{
+		msg = "We were so angry one night at each other and ready to pull each other's hair out. The next day we acted like nothing happened.";
+	}
+	 else if (day == 25)
+	{
+		msg = "You took me to a gun range, treated me to sushi, brought ice cream for me. It was the best birthday I've ever had.";
+	}
+	 else if (day == 26)
+	{
+		msg = "You use to come over to watch me play Xbox. I was like wow, she really likes to watch people play XBOX. Little did I know.";
+	}
+	 else if (day == 27)
+	{
+		msg = "You gave me a bunch of wrapped presents for Christmas, just because I like ripping the wrapping paper.";
+	}
+	 else if (day == 28)
+	{
+		msg = "We were in a taxi-cab in New York and we both thought they driver was going to kill us.";
+	}
+	 else if (day == 29)
+	{
+		msg = "We wrestled in a park and throwing a lighter distracted you.";
+	}
+	else if (day == 30)
+	{
+		msg = "We played Tennis like we were pros. We were the worst in the whole court.";
+	}
+	 else 
+	{
+		msg = "In our New York trip, you were all ready to go home but forgot we missed the biggest thing left to see. TIME SQUARE.";
+	}
+	
+	document.getElementById("txt").innerHTML = "<p>Remember the time when..</p><p>" + msg + "</p>";
+}
+</script>
+</head>
+
+<body onLoad="onload();">
+<div class="bg"><img src="collage2.png" width="100%" height="100%"></div>
+<div id="txt" class="rounded"></div>
+</body>
+</html>
