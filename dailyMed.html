@@ -30,7 +30,7 @@ body {height:100%; margin:0 0 400px; padding:0;}
 </style>
 <script>
 var date = new Date();
-var day = date.getDay();
+var day = date.getDate();
 var hour = date.getHours();
 var qte;
 var msg;
@@ -188,7 +188,7 @@ function onload() {
 
 	}
 	
-	document.getElementById("txt").innerHTML = "<p>Quote: " + qte + "</p><p>" + msg + "</p>";
+	document.getElementById("txt").innerHTML = "<p>" + day + "Quote: " + qte + "</p><p>" + msg + "</p>";
 }
 </script>
 </head>
